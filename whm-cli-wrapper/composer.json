@@ -1,0 +1,24 @@
+{
+    "name": "whm-cli-wrapper",
+    "description": "A command-line interface wrapper for creating cPanel/WHM accounts.",
+    "type": "project",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WhmCliWrapper\\": "src/"
+        }
+    },
+    "bin": [
+        "bin/whm-cli.php"
+    ],
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
+        ]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
