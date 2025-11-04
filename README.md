@@ -27,3 +27,18 @@ Will automatically create user account in cPanel/WHM, create subdomain in WHM an
  - $user_email - contact email
 
 ###############################################################
+curl -sS -X POST "https://whm.example.com/create-whm-account.php" \
+  -H "X-Access-Token: ${ACCESS_TOKEN}" \
+  -d "domain=example.com" \
+  -d "user=hostuser" \
+  -d "password=SecretPass123" \
+  -d "package=unix_500" \
+  -d "email=admin@example.com" \
+  -d "json=1"
+
+###############################################################
+# cPanel WHM Account Creator
+###############################################################
+WHM_USER=root
+WHM_TOKEN=your_long_whm_api_token_here
+ACCESS_TOKEN=a-long-random-access-token
